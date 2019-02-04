@@ -1,47 +1,102 @@
 <!DOCTYPE html><!--!하고 tab누르면 바로 기본셋팅이 완료된다.-->
 <html lang="ko">
     <head>
+        <script
+        src="http://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <meta charset="utf-8"><!--인코딩 방식이 utf-8이라는 것을 알려줌.-->
         <title>나를 소개해요</title>
 
     </head>
     <body>
+    <div class="container">
+        <br>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="1.html">유년기</a></li>
+            <li role="presentation"><a href="2.html">질풍노도의시기</a></li>
+            <li role="presentation"><a href="3.html">방황기</a></li>
+            <li role="presentation"><a href="4.html">현재</a></li>
+        </ul>
+        <br>
         <h1>최효진을 소개합니다</h1>
-        <h2>hyojin's introduce</h2>
+        <h2>hyojin's introduce</h2><br>
 
-        <form action="전송받을 대상">
+        <form action="전송받을대상">
             아이디 : <input type="text" name="myid">
             비밀번호 : <input type="password" name="mypw">
-            <input type="submit">
-
+            <br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <input type="submit" class="btn btn-info">
         </form>
+
         <br>
         <img src="image1.jpg" width=300>
         <br>
         <form action="전송받을 대상">
             <h2>나의 일기장</h2>
-            제목 : <input type="text" name="diarytitle"><br>
+            제목 : <input type="text" name="diarytitle" class="form-control" placeholder="제목을 입력하세요"><br>
+            <!-- 제목 : <input type="text" name="diarytitle"><br> -->
             
-            <select><!--선택할 수 있게-->
+            오늘의 기분 : 
+            <select><!--선택할 수 있게--> 
                 <option value="goodday">좋은날</option>
                 <option value="sadday">슬픈날</option>
-                <option value="sosoy">그저그런날</option>
+                <option value="sosoy">그저그런날</option> 
             </select><br>
-            
+
+            <br>
             내용 : <br> 
-            <textarea cols="30" rows="20"></textarea>
-            <br><input type="submit">
+            <textarea class="form-control" rows="15"></textarea>
+            <input type="submit" class="btn btn-info">
+            <!-- <textarea cols="30" rows="20"></textarea> -->
+            <!-- <br><input type="submit"> -->
         </form><br>
 
-        <h2>나의 일대기</h2>
-        <ol>
-            <li><a href="1.html"><유년기></a></li>
-            <li><a href="2.html">질풍노도의 시기</a></li>
-            <li><a href="3.html">방황기</a></li>
-            <li><a href="4.html">지금</a></li>
-        </ol>
-
+        <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                <span class="sr-only">40% Complete (success)</span>
+            </div>
+            </div>
+            <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                <span class="sr-only">20% Complete</span>
+            </div>
+            </div>
+            <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete (warning)</span>
+            </div>
+            </div>
+            <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">80% Complete (danger)</span>
+            </div>
+        </div>
+    
+    </div>
     </body>
+    
 
 
 </html>
